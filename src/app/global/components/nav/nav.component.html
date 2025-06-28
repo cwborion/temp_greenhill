@@ -1,0 +1,12 @@
+<mat-toolbar color="primary" class="navbar">
+  <span class="logo">Construction App</span>
+
+  <div class="nav-links">
+    <a mat-button routerLink="/home" routerLinkActive="active-link">Home</a>
+    <a mat-button routerLink="/all-jobs" routerLinkActive="active-link">Jobs</a>
+  </div>
+
+  <span class="spacer"></span>
+
+  <button mat-button (click)="logout()">Logout</button>
+</mat-toolbar>

@@ -12,11 +12,12 @@ export class SignInComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
   form = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl('', [Validators.required, Validators.email])
+    password: new FormControl('', [Validators.required, Validators.minLength(8)])
   });
 
   onSubmit() {
@@ -24,6 +25,8 @@ export class SignInComponent implements OnInit {
       console.log('Email Submitted:', this.form.value.email);
       console.log('Password Submitted:', this.form.value.password);
     } else {
+      console.log("this.form.get('password')?.hasError('minLength'): ", this.form.get('password')?.hasError('minLength'));
+      console.log("!this.form.get('password')?.hasError('required'): ", !this.form.get('password')?.hasError('required'));
       this.form.markAllAsTouched();
     }
   }

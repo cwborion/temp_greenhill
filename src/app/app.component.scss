@@ -1,0 +1,16 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.content {
+  flex: 1 1 auto;
+  overflow: auto;
+  min-height: 0;
+}
+
+.temp-footer {
+  background-color: #0A4B39;
+  height: 5rem;
+}

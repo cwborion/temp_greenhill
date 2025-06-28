@@ -1,0 +1,76 @@
+:host {
+  display: block;
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+
+  .job-layout {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 100%;
+    overflow-x: hidden;
+    padding-top: 0.5rem;
+  }
+
+  .job-list {
+    flex: 1 1 45%; // reduced from ~60%
+    max-width: 42rem; // adjust width accordingly
+    box-sizing: border-box;
+
+    .job-link {
+      background-color: #dbf4fc;
+      border-radius: 8px;
+      padding: 1.6rem 2rem;
+      margin-bottom: 1.2rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-align: left;
+
+      .address {
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: #333;
+        margin-bottom: 0.6rem;
+      }
+
+      .client-name {
+        font-size: 2rem;
+        font-weight: 600;
+        color: #0A4B39;
+      }
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+
+  .job-toolbar {
+    flex: 1 1 35%; // grow a little more
+    max-width: 35rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1.5rem;
+
+    .search-field {
+      width: 100%;
+    }
+
+    .create-job-btn {
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: azure;
+    }
+  }
+
+  ::ng-deep div.mat-mdc-form-field-bottom-align {
+    height: 0;
+  }
+
+}

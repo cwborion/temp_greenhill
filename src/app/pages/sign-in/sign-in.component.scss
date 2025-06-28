@@ -1,0 +1,55 @@
+:host {
+  .main-container {
+    background-color: #0A4B39;
+    height: 100%;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .content-container {
+    background-color: azure;
+    margin: 15rem 0rem 1.5rem 0rem;
+    padding-bottom: 1.5rem;
+    width: 90rem;
+    min-width: none;
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #434343;
+    border-radius: 4.5px;
+    box-shadow: .5rem .5rem 1rem rgba(0, 0, 0, 0.3);
+    min-height: 37.8rem;
+    max-height: 43.5rem;
+  }
+
+  .app-name {
+    color: #434343;
+    margin: 5.5rem 0rem 5rem 0rem;
+    font-weight: 500;
+  }
+
+  mat-form-field.full-width {
+    width: 100%;
+  }
+
+  .email-input {
+    margin-bottom: 2rem;
+  }
+
+  input.mat-input-element {
+    padding: .8rem;
+    border-radius: .4rem;
+  }
+
+  .submit-btn {
+    color: #f8faf6;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin: 2.5rem 0rem 0rem 0rem;
+  }
+
+}
+

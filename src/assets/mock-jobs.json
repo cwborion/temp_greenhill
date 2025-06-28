@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "clientName": "Smith",
+    "address": "123 Maple St",
+    "stage": "Active"
+  },
+  {
+    "id": "2",
+    "clientName": "Johnson",
+    "address": "456 Oak Ave",
+    "stage": "Sales"
+  },
+  {
+    "id": "3",
+    "clientName": "Lee",
+    "address": "789 Pine Rd",
+    "stage": "Archived"
+  },
+  {
+    "id": "4",
+    "clientName": "Patel",
+    "address": "321 Birch Blvd",
+    "stage": "Design"
+  },
+  {
+    "id": "5",
+    "clientName": "Taylor",
+    "address": "654 Elm Street",
+    "stage": "Active"
+  },
+  {
+    "id": "6",
+    "clientName": "Nguyen",
+    "address": "987 Cedar Lane",
+    "stage": "Sales"
+  },
+  {
+    "id": "7",
+    "clientName": "Garcia",
+    "address": "246 Spruce Dr",
+    "stage": "Archived"
+  },
+  {
+    "id": "8",
+    "clientName": "Khan",
+    "address": "135 Redwood Rd",
+    "stage": "Design"
+  }
+]

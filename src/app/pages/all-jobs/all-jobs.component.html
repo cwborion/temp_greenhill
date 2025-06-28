@@ -1,0 +1,22 @@
+<div class="main-container">
+  <div class="center-wrapper">
+    <h1 class="title">View Jobs By Stage</h1>
+
+    <div class="content-container">
+      <mat-tab-group class="job-tabs" animationDuration="300ms">
+        <mat-tab label="Active">
+          <app-jobs-list [jobs]="activeJobs"></app-jobs-list>
+        </mat-tab>
+        <mat-tab label="Archived">
+          <app-jobs-list [jobs]="archivedJobs"></app-jobs-list>
+        </mat-tab>
+        <mat-tab label="Sales">
+          <app-jobs-list [jobs]="salesJobs"></app-jobs-list>
+        </mat-tab>
+        <mat-tab label="Design">
+          <app-jobs-list [jobs]="designJobs"></app-jobs-list>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+</div>
