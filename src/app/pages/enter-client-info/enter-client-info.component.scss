@@ -18,7 +18,7 @@
   .content-container {
     margin: 3rem 0rem 1.5rem 0rem;
     background-color: azure;
-    padding: 3rem 2rem 4rem 2rem;
+    padding: 6rem 4rem; // 🔁 doubled padding
     width: 90rem;
     max-width: 100%;
     text-align: center;
@@ -32,18 +32,61 @@
     min-height: 37.8rem;
   }
 
-  .app-name {
-    color: #434343;
-    margin-bottom: 5rem;
+  .title {
+    color: #0A4B39;
+    margin: 0rem 0rem 4rem 0rem;
     font-weight: 500;
+  }
+
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-section {
+    width: 100%;
+    margin-bottom: 3rem;
+
+    .section-header {
+      font-size: 2.4rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      color: #0A4B39;
+      text-align: left;
+    }
+
+    .form-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+    }
   }
 
   mat-form-field.full-width {
     width: 100%;
   }
 
-  .email-input {
-    margin-bottom: 2rem;
+  mat-form-field.half-width {
+    flex: 1 1 48%;
+    min-width: 25rem;
+  }
+
+  mat-form-field.one-third-width {
+    flex: 1 1 30%;
+    min-width: 20rem;
+  }
+
+  mat-form-field.two-thirds-width {
+    flex: 1 1 66%;
+    max-width: 66%;  
+    min-width: 30rem;
+  }
+
+  mat-form-field.aligned-street {
+    margin-right: auto;
   }
 
   input.mat-input-element {
@@ -51,10 +94,9 @@
     border-radius: 0.4rem;
   }
 
-  .submit-btn {
+  .next-btn {
     color: #f8faf6;
     font-size: 1.4rem;
     font-weight: 500;
-    margin: 2.5rem 0rem 3rem 0rem;
   }
 }

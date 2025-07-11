@@ -25,14 +25,13 @@ export class JobsListComponent implements OnInit {
   }
   
   filteredJobs(): Job[] {
-    if (!this.searchTerm?.trim()) return this.jobs;
+  const term = this.searchTerm.toLowerCase();
+  return this.jobs.filter(job =>
+    `${job.clientName.firstName} ${job.clientName.lastName}`.toLowerCase().includes(term) ||
+    `${job.address.street} ${job.address.city} ${job.address.state} ${job.address.zip}`.toLowerCase().includes(term)
+  );
+}
 
-    const lower = this.searchTerm.toLowerCase();
-    return this.jobs.filter(job =>
-      job.clientName.toLowerCase().includes(lower) ||
-      job.address.toLowerCase().includes(lower)
-    );
-  }
 
   onCreateJob(): void {
     // TODO: Navigate to job creation route or open modal

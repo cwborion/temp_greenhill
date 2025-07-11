@@ -1,18 +1,24 @@
 :host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;  // full viewport height
+
   .main-container {
     background-color: #0A4B39;
-    height: 100%;
-    overflow: auto;
+    padding: 0 6.5rem;
+    box-sizing: border-box;
+
+    /* Make main-container take remaining space and enable scroll */
+    flex: 1 1 auto;
     display: flex;
     justify-content: center;
+    overflow: auto;
   }
 
   .content-container {
     background-color: azure;
-    margin: 15rem 0rem 1.5rem 0rem;
     padding-bottom: 1.5rem;
     width: 90rem;
-    min-width: none;
     max-width: 100%;
     text-align: center;
     align-items: center;
@@ -20,9 +26,14 @@
     flex-direction: column;
     border: 1px solid #434343;
     border-radius: 4.5px;
-    box-shadow: .5rem .5rem 1rem rgba(0, 0, 0, 0.3);
+    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
     min-height: 35rem;
-    max-height: 36.5rem;
+    max-height: 36.5rem;  // keep your original max height
+    box-sizing: border-box;
+
+    /* Center vertically within main-container */
+    margin-top: auto;
+    margin-bottom: auto;
   }
 
   .view-jobs-container {
@@ -30,7 +41,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 4rem 2rem 0rem 2rem;
+    padding: 4rem 2rem 0 2rem;
     width: 60%;
 
     .title {

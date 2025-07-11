@@ -1,50 +1,146 @@
 [
   {
     "id": "1",
-    "clientName": "Smith",
-    "address": "123 Maple St",
-    "stage": "Active"
+    "clientName": {
+      "firstName": "John",
+      "lastName": "Smith"
+    },
+    "email": "john.smith@example.com",
+    "address": {
+      "street": "123 Maple St",
+      "city": "Springfield",
+      "state": "IL",
+      "zip": "62704"
+    },
+    "stage": "Active",
+    "createdAt": "2024-12-01T10:00:00Z",
+    "qrCodeLink": "",
+    "projects": ["Kitchen", "Bathroom", "Living Room", "Master Bedroom", "Bedroom", "Attic", "Basement", "Laundry"]
   },
   {
     "id": "2",
-    "clientName": "Johnson",
-    "address": "456 Oak Ave",
-    "stage": "Sales"
+    "clientName": {
+      "firstName": "Emily",
+      "lastName": "Johnson"
+    },
+    "email": "emily.johnson@example.com",
+    "address": {
+      "street": "456 Oak Ave",
+      "city": "Denver",
+      "state": "CO",
+      "zip": "80203"
+    },
+    "stage": "Sales",
+    "createdAt": "2025-01-15T14:30:00Z",
+    "qrCodeLink": "",
+    "projects": ["Kitchen", "Bathroom", "Living Room", "Master Bedroom", "Bedroom", "Attic", "Basement", "Laundry"]
   },
   {
     "id": "3",
-    "clientName": "Lee",
-    "address": "789 Pine Rd",
-    "stage": "Archived"
+    "clientName": {
+      "firstName": "David",
+      "lastName": "Lee"
+    },
+    "email": "david.lee@example.com",
+    "address": {
+      "street": "789 Pine Rd",
+      "city": "Atlanta",
+      "state": "GA",
+      "zip": "30305"
+    },
+    "stage": "Archived",
+    "createdAt": "2024-11-20T09:15:00Z",
+    "qrCodeLink": "",
+    "projects": ["Kitchen", "Bathroom", "Living Room", "Master Bedroom", "Bedroom", "Attic", "Basement", "Laundry"]
   },
   {
     "id": "4",
-    "clientName": "Patel",
-    "address": "321 Birch Blvd",
-    "stage": "Design"
+    "clientName": {
+      "firstName": "Asha",
+      "lastName": "Patel"
+    },
+    "email": "asha.patel@example.com",
+    "address": {
+      "street": "321 Birch Blvd",
+      "city": "Austin",
+      "state": "TX",
+      "zip": "73301"
+    },
+    "stage": "Design",
+    "createdAt": "2025-02-28T08:45:00Z",
+    "qrCodeLink": "",
+    "projects": ["Kitchen", "Bathroom", "Living Room", "Master Bedroom", "Bedroom", "Attic", "Basement", "Laundry"]
   },
   {
     "id": "5",
-    "clientName": "Taylor",
-    "address": "654 Elm Street",
-    "stage": "Active"
+    "clientName": {
+      "firstName": "Chris",
+      "lastName": "Taylor"
+    },
+    "email": "chris.taylor@example.com",
+    "address": {
+      "street": "654 Elm Street",
+      "city": "Madison",
+      "state": "WI",
+      "zip": "53703"
+    },
+    "stage": "Active",
+    "createdAt": "2025-04-10T11:00:00Z",
+    "qrCodeLink": "",
+    "projects": ["Kitchen", "Bathroom", "Living Room", "Master Bedroom", "Bedroom", "Attic", "Basement", "Laundry"]
   },
   {
     "id": "6",
-    "clientName": "Nguyen",
-    "address": "987 Cedar Lane",
-    "stage": "Sales"
+    "clientName": {
+      "firstName": "Linh",
+      "lastName": "Nguyen"
+    },
+    "email": "linh.nguyen@example.com",
+    "address": {
+      "street": "987 Cedar Lane",
+      "city": "Portland",
+      "state": "OR",
+      "zip": "97205"
+    },
+    "stage": "Sales",
+    "createdAt": "2025-05-01T13:25:00Z",
+    "qrCodeLink": "",
+    "projects": ["Kitchen", "Bathroom", "Living Room", "Master Bedroom", "Bedroom", "Attic", "Basement", "Laundry"]
   },
   {
     "id": "7",
-    "clientName": "Garcia",
-    "address": "246 Spruce Dr",
-    "stage": "Archived"
+    "clientName": {
+      "firstName": "Carlos",
+      "lastName": "Garcia"
+    },
+    "email": "carlos.garcia@example.com",
+    "address": {
+      "street": "246 Spruce Dr",
+      "city": "Tampa",
+      "state": "FL",
+      "zip": "33602"
+    },
+    "stage": "Archived",
+    "createdAt": "2025-03-20T16:50:00Z",
+    "qrCodeLink": "",
+    "projects": ["Kitchen", "Bathroom", "Living Room", "Master Bedroom", "Bedroom", "Attic", "Basement", "Laundry"]
   },
   {
     "id": "8",
-    "clientName": "Khan",
-    "address": "135 Redwood Rd",
-    "stage": "Design"
+    "clientName": {
+      "firstName": "Fatima",
+      "lastName": "Khan"
+    },
+    "email": "fatima.khan@example.com",
+    "address": {
+      "street": "135 Redwood Rd",
+      "city": "Seattle",
+      "state": "WA",
+      "zip": "98101"
+    },
+    "stage": "Design",
+    "createdAt": "2025-06-01T10:10:00Z",
+    "qrCodeLink": "",
+    "projects": ["Kitchen", "Bathroom", "Living Room", "Master Bedroom", "Bedroom", "Attic", "Basement", "Laundry"]
   }
 ]

@@ -4,6 +4,8 @@ import { SignInComponent } from './pages/sign-in/sign-in.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { AllJobsComponent } from './pages/all-jobs/all-jobs.component';
 import { JobComponent } from './global/components/job/job.component';
+import { EnterClientInfoComponent } from './pages/enter-client-info/enter-client-info.component';
+import { CreateJobComponent } from './pages/create-job/create-job.component';
 
 const routes: Routes = [
   {
@@ -19,8 +21,16 @@ const routes: Routes = [
     component: AllJobsComponent
   },
   {
+    path: 'enter-client-info',
+    component: EnterClientInfoComponent
+  },
+  {
     path: 'job/:id',
     component: JobComponent
+  },
+  {
+    path: 'create-job',
+    component: CreateJobComponent
   }
 ];
 

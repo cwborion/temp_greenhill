@@ -1,76 +1,162 @@
 :host {
-  display: block;
-  width: 100%;
-  padding: 2rem;
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
 
-  .job-layout {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 2rem;
-    max-width: 100%;
-    overflow-x: hidden;
-    padding-top: 0.5rem;
-  }
-
-  .job-list {
-    flex: 1 1 45%; // reduced from ~60%
-    max-width: 42rem; // adjust width accordingly
+  .main-container {
+    background-color: #0A4B39;
+    padding: 0 6.5rem;
     box-sizing: border-box;
-
-    .job-link {
-      background-color: #dbf4fc;
-      border-radius: 8px;
-      padding: 1.6rem 2rem;
-      margin-bottom: 1.2rem;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-      cursor: pointer;
-      transition: transform 0.2s, box-shadow 0.2s;
-      text-align: left;
-
-      .address {
-        font-size: 1.4rem;
-        font-weight: 500;
-        color: #333;
-        margin-bottom: 0.6rem;
-      }
-
-      .client-name {
-        font-size: 2rem;
-        font-weight: 600;
-        color: #0A4B39;
-      }
-
-      &:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      }
-    }
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
   }
 
-  .job-toolbar {
-    flex: 1 1 35%; // grow a little more
-    max-width: 35rem;
+  .center-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    gap: 1.5rem;
+    align-items: center;
+    width: 100%;
+    flex: 1 1 auto;
+  }
 
-    .search-field {
-      width: 100%;
+  .content-container {
+    background-color: azure;
+    width: 100%;
+    min-height: 35rem;
+    border: 1px solid #434343;
+    padding: 4rem;
+    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stage {
+    color: #0A4B39;
+  }
+
+  .card-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    font-size: 2.4rem;
+    color: #434343;
+    font-weight: 400;
+
+    .title-left {
+      display: flex;
+      flex-direction: column;
+
+      .created-on {
+        font-style: italic;
+        margin: 0.5rem 0rem 0rem 0.2rem;
+        font-size: 1.4rem;
+        color: #434343;
+      }
     }
 
-    .create-job-btn {
-      font-size: 1.4rem;
+    .title-right {
+      font-size: 1.6rem;
       font-weight: 500;
-      color: azure;
+      margin-left: 2rem;
+      white-space: normal;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      .edit-btn-wrapper {
+        // this ensures that the space where the button is conditionally rendered is always the same, 
+        // so that the content below it is always oriented the same as well. It will likely need updated for responsive screens
+        min-height: 3.6rem; 
+
+        .edit-btn {
+          font-weight: 500;
+          background-color: #0a6c50;
+          color: azure;
+          border: 1px solid #434343;
+          border-radius: 4px;
+          height: 3.6rem;
+          line-height: 3.6rem;
+          padding: 0 1.6rem;
+          font-size: 1.4rem;
+          text-transform: none;
+          text-decoration: none;
+        }
+      }
+
+      div.stage-margin {
+        margin-top: 0.5rem;
+      }
+
+      div.qr-margin {
+        margin-top: 0.1rem;
+      }
+
+      a.qr-code {
+        color: #0A4B39;
+        text-decoration: underline;
+        font-weight: 400;
+      }
     }
   }
 
-  ::ng-deep div.mat-mdc-form-field-bottom-align {
-    height: 0;
+  .divider {
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    margin-bottom: 2rem;
   }
 
+  .project-accordion {
+    width: 100%;
+
+    mat-expansion-panel {
+      background-color: azure;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      box-shadow: none;
+
+      mat-expansion-panel-header {
+        background-color: #dbf4fc;
+        font-size: 1.6rem;
+        font-weight: 500;
+        justify-content: space-between;
+        border-radius: 0;
+
+        ::ng-deep span.mat-content {
+          overflow: visible;
+        }
+
+        mat-panel-description {
+          display: flex;
+          align-items: center;
+
+          mat-icon {
+            transform: rotate(0deg);
+            transition: transform 0.2s;
+          }
+        }
+
+        &.mat-expanded mat-icon {
+          transform: rotate(180deg);
+        }
+      }
+
+      .panel-divider {
+        height: 1px;
+        background-color: #999;
+        margin-left: -30px;
+        width: calc(100% + 60px);
+      }
+
+      .panel-content {
+        padding: 1rem;
+        font-size: 1.4rem;
+        color: #333;
+      }
+    }
+  }
 }

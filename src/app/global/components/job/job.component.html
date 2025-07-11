@@ -1,4 +1,50 @@
-<p>{{ job?.id }}</p>
-<p>{{ job?.clientName }}</p>
-<p>{{ job?.address }}</p>
-<p>{{ job?.stage }}</p>
+<div class="main-container">
+  <div class="center-wrapper">
+    <div class="content-container">
+      <div class="card-title">
+        <div class="title-left">
+          <div>
+            {{ job?.address?.street }}, {{ job?.address?.city }},
+            {{ job?.address?.state }} {{ job?.address?.zip }}
+          </div>
+          <div>
+            {{ job?.clientName?.firstName }} {{ job?.clientName?.lastName }}
+          </div>
+          <span class="created-on">
+            <strong>Created on:</strong>
+            {{ job?.createdAt | date: 'shortDate' }}
+          </span>
+        </div>
+
+        <div class="title-right">
+          <div class="edit-btn-wrapper">
+            <!-- <a *ngIf="isAuthenticated" class="edit-btn" mat-stroked-button routerLink="">Edit Job</a> -->
+            <a class="edit-btn" mat-stroked-button routerLink="">Edit Job</a>
+          </div>
+          <div class="stage-margin"><strong>Stage:</strong><span class="stage"> {{ job?.stage }}</span></div>
+          <div class="qr-margin">
+            <strong>QR Code/Link: </strong>
+            <a class="qr-code" href="https://www.yahoo.com" target="_blank" rel="noopener noreferrer">https://www.yahoo.com</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <mat-accordion class="project-accordion" multi="false">
+        <mat-expansion-panel *ngFor="let project of projects">
+          <mat-expansion-panel-header>
+            <mat-panel-title>{{ project }}</mat-panel-title>
+            <!-- <mat-panel-description>
+              <mat-icon>expand_more</mat-icon>
+            </mat-panel-description> -->
+          </mat-expansion-panel-header>
+
+          <div class="panel-divider"></div>
+
+          <p>Placeholder content for {{ project }}.</p>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+  </div>
+</div>

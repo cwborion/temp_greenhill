@@ -1,16 +1,26 @@
-.app-container {
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.app-wrapper {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  min-height: 100vh;  /* Full viewport height */
 }
 
-.content {
-  flex: 1 1 auto;
-  overflow: auto;
-  min-height: 0;
+.main-content {
+  flex: 1 0 auto;  /* Grow and take remaining space */
+  display: flex;
+  flex-direction: column;
+  /* NO height: 100% here */
 }
+
 
 .temp-footer {
+  flex-shrink: 0;
   background-color: #0A4B39;
-  height: 5rem;
+  padding: 2rem 0;
 }
+
+

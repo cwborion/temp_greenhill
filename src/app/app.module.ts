@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -9,6 +10,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatExpansionModule } from '@angular/material/expansion';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { SignInComponent } from './pages/sign-in/sign-in.component';
@@ -17,6 +19,9 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { AllJobsComponent } from './pages/all-jobs/all-jobs.component';
 import { JobsListComponent } from './global/components/jobs-list/jobs-list.component';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+import { JobComponent } from './global/components/job/job.component';
+import { EnterClientInfoComponent } from './pages/enter-client-info/enter-client-info.component';
 
 @NgModule({
   declarations: [
@@ -25,10 +30,13 @@ import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http'
     NavComponent,
     HomePageComponent,
     AllJobsComponent,
-    JobsListComponent
+    JobsListComponent,
+    JobComponent,
+    EnterClientInfoComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     MatButtonModule,
     MatCardModule,
@@ -39,7 +47,9 @@ import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http'
     MatToolbarModule,
     MatDividerModule,
     MatTabsModule,
-    FormsModule
+    FormsModule,
+    CommonModule,
+    MatExpansionModule
   ],
   providers: [
     provideHttpClient()

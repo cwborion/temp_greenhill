@@ -6,8 +6,13 @@
       *ngFor="let job of filteredJobs()"
       (click)="navigateToJob(job)"
     >
-      <div class="address">{{ job.address }}</div>
-      <div class="client-name">{{ job.clientName }}</div>
+      <div class="address">
+        {{ job.address.street }}, {{ job.address.city }}, {{ job.address.state }}
+        {{ job.address.zip }}
+      </div>
+      <div class="client-name">
+        {{ job.clientName.firstName }} {{ job.clientName.lastName }}
+      </div>
     </div>
   </div>
 
@@ -24,6 +29,7 @@
 
     <button
       mat-raised-button
+      routerLink="/enter-client-info"
       color="primary"
       class="create-job-btn"
       (click)="onCreateJob()"

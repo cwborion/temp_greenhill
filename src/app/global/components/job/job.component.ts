@@ -10,24 +10,32 @@ import { JobService } from '../../services/job.service';
   standalone: false
 })
 export class JobComponent implements OnInit {
-  job: Job | undefined;
+  job?: Job;
 
   constructor(
     private jobService: JobService,
     private route: ActivatedRoute
-  ) { }
+  ) {}
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
     if (id) {
       this.jobService.getJobById(id).subscribe(job => {
         this.job = job;
+        console.log(this.job);
       });
     } else {
-      // handle missing id case, e.g. show error or navigate away
       console.log('No ID present!');
     }
   }
 
+  getJobLink(job: Job): string {
+    return `https://yourapp.com/jobs/${job.id}`;
+  }
 
+  // Optional: getter for projects to avoid template errors if job is undefined
+  get projects(): string[] {
+    return this.job?.projects ?? [];
+  }
 }
+
