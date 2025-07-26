@@ -1,0 +1,98 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  box-sizing: border-box;
+
+  .content-container {
+    background-color: azure;
+    padding: 4rem;
+    width: 100%;
+    max-width: 60rem;
+    max-height: 90vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #434343;
+    border-radius: 2.8rem;
+    box-sizing: border-box;
+  }
+
+  .title {
+    color: #0A4B39;
+    margin: 0rem;
+    margin-bottom: 3rem;
+    font-weight: 500;
+    font-size: 2.4rem;
+  }
+
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-section {
+    width: 100%;
+
+    .section-header {
+      font-size: 2.2rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      color: #0A4B39;
+      text-align: left;
+    }
+
+    .form-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1.5rem;
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  mat-form-field.full-width {
+    width: 100%;
+  }
+
+  mat-form-field.half-width,
+  .half-width.spacer {
+    flex: 1 1 48%;
+    min-width: 20rem;
+  }
+
+  input.mat-input-element {
+    padding: 0.8rem;
+    border-radius: 0.4rem;
+  }
+
+  .button-row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+
+    button {
+      min-width: 10rem;
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
+
+    button[type="submit"] {
+      color: white;
+    }
+  }
+
+  ::ng-deep div.mat-mdc-form-field-infix {
+    min-height: 4rem;
+    padding-top: 1rem;
+    padding-bottom: 0rem;
+  }
+
+}
+

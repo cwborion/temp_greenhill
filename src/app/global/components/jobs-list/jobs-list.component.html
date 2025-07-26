@@ -7,11 +7,11 @@
       (click)="navigateToJob(job)"
     >
       <div class="address">
-        {{ job.address.street }}, {{ job.address.city }}, {{ job.address.state }}
-        {{ job.address.zip }}
+        {{ job?.address?.street }}, {{ job?.address?.city }}, {{ job?.address?.state }}
+        {{ job?.address?.zip }}
       </div>
       <div class="client-name">
-        {{ job.clientName.firstName }} {{ job.clientName.lastName }}
+        {{ job?.clientName?.firstName }} {{ job?.clientName?.lastName }}
       </div>
     </div>
   </div>

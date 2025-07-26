@@ -22,6 +22,10 @@ import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http'
 import { CommonModule } from '@angular/common';
 import { JobComponent } from './global/components/job/job.component';
 import { EnterClientInfoComponent } from './pages/enter-client-info/enter-client-info.component';
+import { CreateJobComponent } from './pages/create-job/create-job.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { EditClientModalComponent } from './global/components/enter-client-modal/edit-client-modal.component';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -32,7 +36,9 @@ import { EnterClientInfoComponent } from './pages/enter-client-info/enter-client
     AllJobsComponent,
     JobsListComponent,
     JobComponent,
-    EnterClientInfoComponent
+    EnterClientInfoComponent,
+    CreateJobComponent,
+    EditClientModalComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +46,7 @@ import { EnterClientInfoComponent } from './pages/enter-client-info/enter-client
     AppRoutingModule,
     MatButtonModule,
     MatCardModule,
+    MatDialogModule,
     MatIconModule,
     ReactiveFormsModule,
     MatFormFieldModule,
@@ -49,7 +56,8 @@ import { EnterClientInfoComponent } from './pages/enter-client-info/enter-client
     MatTabsModule,
     FormsModule,
     CommonModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatSelectModule
   ],
   providers: [
     provideHttpClient()

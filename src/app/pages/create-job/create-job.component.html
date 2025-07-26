@@ -1,1 +1,66 @@
-<p>CREATE JOB COMPONENT</p>
+<div class="main-container">
+  <div class="center-wrapper">
+    <div class="content-container">
+      <div class="card-title">
+        <div class="title-left">
+          <!-- ✅ Dynamic Address -->
+          <div>
+            {{ job?.address?.street }}, {{ job?.address?.city }},
+            {{ job?.address?.state }} {{ job?.address?.zip }}
+          </div>
+
+          <!-- ✅ Dynamic Name -->
+          <div>
+            {{ job?.clientName?.firstName }} {{ job?.clientName?.lastName }}
+          </div>
+
+          <!-- ✅ Dynamic Created At -->
+          <span class="created-on">
+            <strong>Created on:</strong>
+            {{ job?.createdAt | date: 'shortDate' }}
+          </span>
+        </div>
+
+        <div class="title-right">
+          <div class="edit-btn-wrapper">
+            <button class="edit-btn" mat-stroked-button (click)="openEditClientModal()">
+              Edit Client Info
+            </button>
+          </div>
+          <div class="stage-margin">
+            <mat-form-field appearance="outline" class="stage-select">
+              <mat-label class="stage"><strong>Stage</strong></mat-label>
+              <mat-select [(value)]="job.stage">
+                <mat-option *ngFor="let option of stageOptions" [value]="option">
+                  {{ option }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+
+          <div class="qr-margin">
+            <strong>QR Code/Link: </strong>
+            <a class="qr-code" [href]="job.qrCodeLink" target="_blank" rel="noopener noreferrer">
+              {{ job.qrCodeLink }}
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Add Project Header + Buttons Inline -->
+      <div class="project-header-row">
+        <h2 class="section-header">Add Project:</h2>
+        <div class="project-buttons">
+          <button mat-raised-button class="project-button">Kitchen</button>
+          <button mat-raised-button class="project-button">Bathroom</button>
+          <button mat-raised-button class="project-button">Laundry/Wet Bar</button>
+          <button mat-raised-button class="project-button">Attic</button>
+          <button mat-raised-button class="project-button">Basement</button>
+          <button mat-raised-button class="project-button">Miscellaneous</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

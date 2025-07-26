@@ -27,8 +27,8 @@ export class JobsListComponent implements OnInit {
   filteredJobs(): Job[] {
   const term = this.searchTerm.toLowerCase();
   return this.jobs.filter(job =>
-    `${job.clientName.firstName} ${job.clientName.lastName}`.toLowerCase().includes(term) ||
-    `${job.address.street} ${job.address.city} ${job.address.state} ${job.address.zip}`.toLowerCase().includes(term)
+    `${job?.clientName?.firstName} ${job?.clientName?.lastName}`.toLowerCase().includes(term) ||
+    `${job?.address?.street} ${job?.address?.city} ${job?.address?.state} ${job?.address?.zip}`.toLowerCase().includes(term)
   );
 }
 
